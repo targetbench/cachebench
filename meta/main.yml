@@ -35,8 +35,8 @@ galaxy_info:
   platforms:
   - name: Ubuntu
     versions:
-    - all
-  #   - 25
+    - trusty
+    - xenial
   - name: RedHat
     versions:
     - all
