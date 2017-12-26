@@ -1,5 +1,5 @@
 
-- hosts: Device
+- hosts: '{{ hosts }}'
   tasks:
     - name: remove latest data
       file:
@@ -7,7 +7,7 @@
         state: absent
 
     - name: run cachebench
-      shell: cd /tmp/cachebench && ./cachebench -b -x1 -m24 -d5 -e2
+      shell: cd /tmp/cachebench && ./cachebench -r -x1 -m24 -d5 -e2
       register: logdata
       ignore_errors: yes
 
